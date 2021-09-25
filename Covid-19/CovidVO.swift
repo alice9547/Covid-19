@@ -1,0 +1,9 @@
+//
+//  CovidVO.swift
+//  Covid-19
+//
+//  Created by 소프트웨어컴퓨터 on 2021/09/25.
+//
+
+import Foundation
+

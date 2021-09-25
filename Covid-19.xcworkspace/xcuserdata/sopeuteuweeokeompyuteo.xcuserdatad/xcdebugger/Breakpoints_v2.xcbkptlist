@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "18EC2E54-A36A-45B3-92E6-CCA3E6F547C2"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Covid-19/ListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - b73efcf9ffc36e26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.__deallocating_deinit"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - 1d2e98e69691b84d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.__allocating_init(style: __C.UITableViewStyle) -&gt; Covid_19.ListViewController"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - eea79759b3717020"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.init(style: __C.UITableViewStyle) -&gt; Covid_19.ListViewController"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - ec6585ffae4d9e55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Covid_19.ListViewController"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - c25ed77f491c7ab0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Covid_19.ListViewController"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "386">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - 1b50daaf17739dd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Covid_19.ListViewController&gt;"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1C4B1320-E699-4F12-8EB8-41328F652AE8 - caa6a6dfbe5592ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.ListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Covid_19.ListViewController&gt;"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sopeuteuweeokeompyuteo/Desktop/kes/Covid-19/Covid-19/ListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "239">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
