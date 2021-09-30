@@ -14,8 +14,8 @@
             filePath = "Covid-19/ListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "ListViewController"
             landmarkType = "3">
             <Locations>
@@ -137,8 +137,8 @@
             filePath = "Covid-19/ListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "callCovidAPI()"
             landmarkType = "7">
          </BreakpointContent>
