@@ -34,7 +34,7 @@ class ListViewController: UITableViewController {
 
             for row in covidData{
                 print(row.id)
-                print(row.date)
+//                print(row.date)
                 
             }
         } catch {
