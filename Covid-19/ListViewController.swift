@@ -24,7 +24,7 @@ class ListViewController: UITableViewController {
         let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/10"
         let apiURI: URL! = URL(string: url)
         let apidata = try! Data(contentsOf:apiURI)
-        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+//        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
         
         let decoder = JSONDecoder()
 
@@ -34,6 +34,7 @@ class ListViewController: UITableViewController {
 
             for row in covidData{
                 print(row.id)
+                print(row.date)
                 
             }
         } catch {
