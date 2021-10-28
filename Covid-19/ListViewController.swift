@@ -9,10 +9,7 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
-    lazy var list: [CovidVO] = {
-        var datalist = [CovidVO]()
-        return datalist
-    }()
+    var covidData:[Row] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,63 +26,27 @@ class ListViewController: UITableViewController {
         let decoder = JSONDecoder()
         do{
             let result = try decoder.decode(CovidVO.self,from: jsonData)
-            let covidData = result.corona19Status.row
+            covidData = result.corona19Status.row
 
-            for row in covidData{
-                var r = [String : String]()
-                r["id"] = row.id
-                r["area"] = row.area
-                r["date"] = row.date
-                r["history"] = row.history
-                
-                
-            }
+
         } catch {
             print(error)
         }
-        
-//        do {
-//            let decoder = JSONDecoder()
-//            let jsonString = String(data: apidata, encoding: .utf8)
-//            let data = jsonString?.data(using: .utf8)
-//
-//
-//            let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
-//
-//            let status = apiDictionary["Corona19Status"] as! NSDictionary
-//            //let result = status["RESULT"] as! NSArray
-//            let covid = status["row"] as! NSArray
-//
-//            for row in covid {
-//                let r = row as! NSDictionary
-//
-//                let cvo = CovidVO()
-//
-//                cvo.id = r["CORONA19_ID"] as? String
-//                cvo.area = r["CORONA19_AREA"] as? String
-//                cvo.date = r["CORONA19_DATE"] as? String
-//                cvo.history = r["CORONA19_CONTACT_HISTORY"] as? String
-//
-//                self.list.append(cvo)
-//            }
-//
-//        } catch {}
-//
 }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.list.count
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let row = self.list[indexPath.row]
+        let row = self.covidData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! CovidCell
 
-//        cell.id?.text = row.id
-//        cell.area?.text = row.area
-//        cell.date?.text = row.date
-//        cell.history?.text = row.history
+        cell.id?.text = row.id
+        cell.area?.text = row.area
+        cell.date?.text = row.date
+        cell.history?.text = row.history
 
         return cell
     }
