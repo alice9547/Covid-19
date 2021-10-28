@@ -33,7 +33,7 @@ class ListViewController: UITableViewController {
             let covidData = result.corona19Status.row
 
             for row in covidData{
-//                print(row.id)
+                print(row.id)
                 
             }
         } catch {
