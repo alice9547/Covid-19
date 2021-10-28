@@ -22,18 +22,22 @@ class ListViewController: UITableViewController {
     // MARK: - Table view data source
     func callCovidAPI() {
         let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/10"
-        let apiURI: URL! = URL(string: url)
-        let apidata = try! Data(contentsOf:apiURI)
-//        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+//        let apiURI: URL! = URL(string: url)
+//서버불안정할때
+//        let apidata = try! Data(contentsOf:apiURI)
         
         let decoder = JSONDecoder()
-
         do{
-            let result = try decoder.decode(CovidVO.self,from: apidata)
+            let result = try decoder.decode(CovidVO.self,from: jsonData)
             let covidData = result.corona19Status.row
 
             for row in covidData{
-                print(row.id)
+                var r = [String : String]()
+                r["id"] = row.id
+                r["area"] = row.area
+                r["date"] = row.date
+                r["history"] = row.history
+                
                 
             }
         } catch {
