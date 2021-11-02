@@ -10,22 +10,24 @@ import UIKit
 class ListViewController: UITableViewController {
     
     var covidData:[Row] = []
+    var nowonData:[Row] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         callCovidAPI()
+        pickNowon()
     }
 
     // MARK: - Table view data source
     func callCovidAPI() {
-        let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/10"
-//        let apiURI: URL! = URL(string: url)
+        let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/100"
+        let apiURI: URL! = URL(string: url)
 //서버불안정할때
-//        let apidata = try! Data(contentsOf:apiURI)
+        let apidata = try! Data(contentsOf:apiURI)
         
         let decoder = JSONDecoder()
         do{
-            let result = try decoder.decode(CovidVO.self,from: jsonData)
+            let result = try decoder.decode(CovidVO.self,from: apidata)
             covidData = result.corona19Status.row
 
 
@@ -33,15 +35,23 @@ class ListViewController: UITableViewController {
             print(error)
         }
 }
+    func pickNowon() {
+        for row in covidData{
+            if row.area=="노원구"{
+                nowonData.append(row)
+                print(nowonData)
+            }
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 30
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let row = self.covidData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! CovidCell
+        let row = self.nowonData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! CovidNowonCell
 
         cell.id?.text = row.id
         cell.area?.text = row.area

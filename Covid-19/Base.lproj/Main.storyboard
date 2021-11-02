@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pb7-D3-hpp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAb-8D-Pyo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--코로나 확진 현황-->
+        <!--코로나 확진 현황_전체-->
         <scene sceneID="VRU-Z2-AHf">
             <objects>
                 <tableViewController id="iTB-qB-Ice" customClass="ListViewController" customModule="Covid_19" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,16 +66,17 @@
                             <outlet property="delegate" destination="iTB-qB-Ice" id="QnW-GA-ySy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="코로나 확진 현황" id="Uqi-8z-FRm"/>
+                    <navigationItem key="navigationItem" title="코로나 확진 현황_전체" id="Uqi-8z-FRm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-tj-DhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573.91304347826087" y="162.72321428571428"/>
+            <point key="canvasLocation" x="1528" y="-46"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="vLe-Lh-RIX">
             <objects>
                 <navigationController id="Pb7-D3-hpp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZKt-R6-i4P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8e-Ft-P5f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,7 +87,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueJ-kp-E0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291" y="163"/>
+            <point key="canvasLocation" x="648" y="-46"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NWK-dc-SIe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rAb-8D-Pyo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8y-2i-KRv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pb7-D3-hpp" kind="relationship" relationship="viewControllers" id="hSu-5i-fRR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSw-Kp-p0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291.304347826087" y="162.72321428571428"/>
         </scene>
     </scenes>
     <resources>
