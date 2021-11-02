@@ -10,55 +10,57 @@ import UIKit
 class ListViewController: UITableViewController {
     var covidData:[Row] = []
     var pickData:[Row] = []
-    var txtpick:String?
+    var txtpick:String? = nil
     
     @IBOutlet weak var txtGu: UITextField!
     @IBAction func btnPick(_ sender: Any) {
+        pickData = []
         txtpick = txtGu.text
-        callCovidAPI()
-        self.pickGu()
         print("\(txtpick!)버튼 선택")
+        
+        for row in covidData{
+            if row.area == txtpick{
+                pickData.append(row)
+                print(pickData)
+            }
+        }
         self.tableView.reloadData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        callCovidAPI()
-        pickGu()
+        self.callCovidAPI()
+
     }
 
     // MARK: - Table view data source
     func callCovidAPI() {
-        let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/100"
+        let url = "http://openapi.seoul.go.kr:8088/786377506d616c6932335a4b417249/json/Corona19Status/1/10"
         let apiURI: URL! = URL(string: url)
-//서버불안정할때
+//서버 불안정 할 때 jsonData로 사용
         let apidata = try! Data(contentsOf:apiURI)
         
         let decoder = JSONDecoder()
         do{
             let result = try decoder.decode(CovidVO.self,from: apidata)
             covidData = result.corona19Status.row
+            for row in covidData{
+                pickData.append(row)
+            }
             print("apidata는 받음")
-
+            
         } catch {
             print(error)
         }
 }
-    func pickGu() {
-        if txtpick != nil{
-            for row in covidData{
-                if row.area==txtGu.text{
-                    pickData.append(row)
-                }
-            }
-            print("pickGu실행")
-        }
-        else{
-            for row in covidData{
-                pickData.append(row)
-            }
-        }
-    }
+//    func pickGu() {
+//        for row in covidData{
+//            if row.area == txtpick{
+//                pickData.append(row)
+//            }
+//        }
+//        print("pickGu 호출")
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pickData.count

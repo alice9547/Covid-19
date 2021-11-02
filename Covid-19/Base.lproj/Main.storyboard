@@ -20,14 +20,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-MV-j3K">
-                                    <rect key="frame" x="0.0" y="0.0" width="368" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="356" height="44"/>
                                     <accessibility key="accessibilityConfiguration" hint="찾으시는 구"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clD-ud-3Rs">
-                                    <rect key="frame" x="368" y="0.0" width="46" height="44"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="356" y="0.0" width="58" height="44"/>
+                                    <state key="normal" title="    검색    "/>
                                     <connections>
                                         <action selector="btnPick:" destination="iTB-qB-Ice" eventType="touchUpInside" id="Owv-sQ-WN1"/>
                                     </connections>
@@ -122,6 +122,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rAb-8D-Pyo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8y-2i-KRv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
