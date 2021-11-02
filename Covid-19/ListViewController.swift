@@ -22,6 +22,7 @@ class ListViewController: UITableViewController {
         print("\(txtpick!)버튼 선택")
         self.tableView.reloadData()
     }
+    
     @IBAction func btnReset(_ sender: Any) {
         pickData = []
         txtpick = nil

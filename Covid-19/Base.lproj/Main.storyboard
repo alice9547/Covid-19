@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -104,13 +105,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-tj-DhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="-88"/>
+            <point key="canvasLocation" x="1238" y="532"/>
         </scene>
-        <!--Item-->
+        <!--자치구별 확진자-->
         <scene sceneID="vLe-Lh-RIX">
             <objects>
                 <navigationController id="Pb7-D3-hpp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ZKt-R6-i4P"/>
+                    <tabBarItem key="tabBarItem" title="자치구별 확진자" selectedImage="person.fill" catalog="system" id="ZKt-R6-i4P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8e-Ft-P5f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,7 +122,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueJ-kp-E0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="-46"/>
+            <point key="canvasLocation" x="491" y="532"/>
+        </scene>
+        <!--전국 확진자-->
+        <scene sceneID="igg-BE-5U9">
+            <objects>
+                <viewController id="phL-L9-XbD" customClass="ViewController" customModule="Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9K-NV-e10">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iLA-lI-bNp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="전국 확진자" selectedImage="person.3.fill" catalog="system" id="azG-DQ-rs6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phJ-Qt-KYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="-170"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NWK-dc-SIe">
@@ -134,7 +151,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Pb7-D3-hpp" kind="relationship" relationship="viewControllers" id="hSu-5i-fRR"/>
+                        <segue destination="phL-L9-XbD" kind="relationship" relationship="viewControllers" id="GgQ-Hq-k89"/>
+                        <segue destination="Pb7-D3-hpp" kind="relationship" relationship="viewControllers" id="7HB-D0-ebL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSw-Kp-p0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,6 +161,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

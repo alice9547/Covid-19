@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let url = "http://openapi.seoul.go.kr:8088/6676465568616c6935335a63596e50/json/TbCorona19CountStatus/1/1"
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
