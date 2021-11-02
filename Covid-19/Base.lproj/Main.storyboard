@@ -20,16 +20,23 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-MV-j3K">
-                                    <rect key="frame" x="0.0" y="0.0" width="356" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="309" height="44"/>
                                     <accessibility key="accessibilityConfiguration" hint="찾으시는 구"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clD-ud-3Rs">
-                                    <rect key="frame" x="356" y="0.0" width="58" height="44"/>
+                                    <rect key="frame" x="309" y="0.0" width="58" height="44"/>
                                     <state key="normal" title="    검색    "/>
                                     <connections>
                                         <action selector="btnPick:" destination="iTB-qB-Ice" eventType="touchUpInside" id="Owv-sQ-WN1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOj-hZ-Ad5">
+                                    <rect key="frame" x="367" y="0.0" width="47" height="44"/>
+                                    <state key="normal" title=" 초기화 "/>
+                                    <connections>
+                                        <action selector="btnReset:" destination="iTB-qB-Ice" eventType="touchUpInside" id="m96-Rz-HI0"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -97,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-tj-DhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="-46"/>
+            <point key="canvasLocation" x="1326" y="-88"/>
         </scene>
         <!--Item-->
         <scene sceneID="vLe-Lh-RIX">
