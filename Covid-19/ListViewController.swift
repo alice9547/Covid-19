@@ -8,14 +8,23 @@
 import UIKit
 
 class ListViewController: UITableViewController {
-    
     var covidData:[Row] = []
-    var nowonData:[Row] = []
+    var pickData:[Row] = []
+    var txtpick:String?
+    
+    @IBOutlet weak var txtGu: UITextField!
+    @IBAction func btnPick(_ sender: Any) {
+        txtpick = txtGu.text
+        callCovidAPI()
+        self.pickGu()
+        print("\(txtpick!)버튼 선택")
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         callCovidAPI()
-        pickNowon()
+        pickGu()
     }
 
     // MARK: - Table view data source
@@ -29,28 +38,35 @@ class ListViewController: UITableViewController {
         do{
             let result = try decoder.decode(CovidVO.self,from: apidata)
             covidData = result.corona19Status.row
-
+            print("apidata는 받음")
 
         } catch {
             print(error)
         }
 }
-    func pickNowon() {
-        for row in covidData{
-            if row.area=="노원구"{
-                nowonData.append(row)
-                print(nowonData)
+    func pickGu() {
+        if txtpick != nil{
+            for row in covidData{
+                if row.area==txtGu.text{
+                    pickData.append(row)
+                }
+            }
+            print("pickGu실행")
+        }
+        else{
+            for row in covidData{
+                pickData.append(row)
             }
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nowonData.count
+        return pickData.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let row = self.nowonData[indexPath.row]
+        let row = self.pickData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! CovidCell
 
         cell.id?.text = row.id
