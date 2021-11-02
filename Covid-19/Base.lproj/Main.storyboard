@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--코로나 확진 현황_전체-->
+        <!--코로나 확진 현황-->
         <scene sceneID="VRU-Z2-AHf">
             <objects>
                 <tableViewController id="iTB-qB-Ice" customClass="ListViewController" customModule="Covid_19" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,6 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="bIK-t3-Uc4">
+                            <rect key="frame" x="0.0" y="180" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="124" id="o9d-mk-ZE2" customClass="CovidCell" customModule="Covid_19">
                                 <rect key="frame" x="0.0" y="28" width="414" height="124"/>
@@ -66,7 +71,7 @@
                             <outlet property="delegate" destination="iTB-qB-Ice" id="QnW-GA-ySy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="코로나 확진 현황_전체" id="Uqi-8z-FRm"/>
+                    <navigationItem key="navigationItem" title="코로나 확진 현황" id="Uqi-8z-FRm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJW-tj-DhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
