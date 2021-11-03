@@ -17,6 +17,7 @@
 		688FE2A126FEDD02006CBC41 /* CovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688FE2A026FEDD02006CBC41 /* CovidCell.swift */; };
 		688FE2A426FEDEA6006CBC41 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688FE2A326FEDEA6006CBC41 /* ListViewController.swift */; };
 		688FE2AB26FEFC3F006CBC41 /* CovidVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688FE2AA26FEFC3F006CBC41 /* CovidVO.swift */; };
+		68A8F33F27326845007625CD /* TotalVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8F33E27326845007625CD /* TotalVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		688FE2A026FEDD02006CBC41 /* CovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCell.swift; sourceTree = "<group>"; };
 		688FE2A326FEDEA6006CBC41 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		688FE2AA26FEFC3F006CBC41 /* CovidVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidVO.swift; sourceTree = "<group>"; };
+		68A8F33E27326845007625CD /* TotalVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalVO.swift; sourceTree = "<group>"; };
 		70AE5BEAFE3C062D73A49851 /* Pods-Covid-19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.debug.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.debug.xcconfig"; sourceTree = "<group>"; };
 		FF561F51E1BD9B5A7D4B2361 /* Pods-Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				688FE28D26FED48E006CBC41 /* Main.storyboard */,
 				688FE2A326FEDEA6006CBC41 /* ListViewController.swift */,
 				688FE2AA26FEFC3F006CBC41 /* CovidVO.swift */,
+				68A8F33E27326845007625CD /* TotalVO.swift */,
 				688FE2A026FEDD02006CBC41 /* CovidCell.swift */,
 				688FE29026FED491006CBC41 /* Assets.xcassets */,
 				688FE29226FED491006CBC41 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 				688FE28C26FED48E006CBC41 /* ViewController.swift in Sources */,
 				688FE28826FED48E006CBC41 /* AppDelegate.swift in Sources */,
 				688FE2AB26FEFC3F006CBC41 /* CovidVO.swift in Sources */,
+				68A8F33F27326845007625CD /* TotalVO.swift in Sources */,
 				688FE28A26FED48E006CBC41 /* SceneDelegate.swift in Sources */,
 				688FE2A426FEDEA6006CBC41 /* ListViewController.swift in Sources */,
 				688FE2A126FEDD02006CBC41 /* CovidCell.swift in Sources */,
