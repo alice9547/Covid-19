@@ -8,5 +8,6 @@ target 'Covid-19' do
   # Pods for Covid-19
 
 pod 'Alamofire', ' ~> 5.2'
+pod 'Charts'
 
 end
