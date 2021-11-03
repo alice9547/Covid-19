@@ -56,5 +56,22 @@ class ViewController: UIViewController {
         txtTotal.text = numberFormatter.string(for: intTotal)! + " 명"
         txtNew.text = numberFormatter.string(for: intNew)! + " 명"
     }
+    
+    func drawCharts(){
+        
+        var lineChartEntry = [ChartDataEntry]() // graph 에 보여줄 data array
+                
+             // chart data array 에 데이터 추가
+//             for i in 0..<newHJ.count {
+//                    let value = ChartDataEntry(x: i, y: newHJ[i])
+//                    lineChartEntry.append(value)
+//             }
+//        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number")
+//             line1.colors = [NSUIColor.blue]
+//                
+//             let data = LineChartData()
+//             data.addDataSet(line1)
+//                
+//             lineChartView.data = data
+    }
 }
-
