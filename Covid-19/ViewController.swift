@@ -11,11 +11,13 @@ import Charts
 class ViewController: UIViewController {
 
     var newHJ:[Int] = []
+    var newHJdate:[String] = []
     var tCovidData:[TotalRow] = []
     
     @IBOutlet weak var txtdate: UILabel!
     @IBOutlet weak var txtTotal: UILabel!
     @IBOutlet weak var txtNew: UILabel!
+    @IBOutlet weak var barChartView: BarChartView!
     
     
     override func viewDidLoad() {
@@ -23,6 +25,11 @@ class ViewController: UIViewController {
         callTotalAPI()
         // Do any additional setup after loading the view.
         fillText()
+        
+        barChartView.noDataText = "데이터가 없습니다."
+                barChartView.noDataFont = .systemFont(ofSize: 20)
+        barChartView.noDataTextColor = .lightGray
+        setCharts(dataPoints: newHJdate, values: newHJ)
     }
     
 //apiData받기
@@ -38,6 +45,7 @@ class ViewController: UIViewController {
             
             for r in tCovidData{
                 newHJ.append(Int(r.new) ?? 0)
+                newHJdate.append(r.date.substring(from: 5, to: 9))
             }
             
         } catch {
@@ -57,21 +65,58 @@ class ViewController: UIViewController {
         txtNew.text = numberFormatter.string(for: intNew)! + " 명"
     }
     
-    func drawCharts(){
+//차트 그리기
+    func setCharts(dataPoints: [String], values: [Int]){
+
+        // 데이터 생성
+        var dataEntries: [BarChartDataEntry] = []
+        for i in 0..<newHJdate.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
+            dataEntries.append(dataEntry)
+        }
+        print(dataEntries[0])
+        //정수형으로 변환
+        let format = NumberFormatter()
+        format.numberStyle = .decimal
+        let formatter = DefaultValueFormatter(formatter: format)
+
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "신규 확진자")
+ 
+        // 차트 컬러
+        chartDataSet.colors = [.systemOrange]
+
+        // 데이터 삽입
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chartData.setValueFormatter(formatter)
         
-        var lineChartEntry = [ChartDataEntry]() // graph 에 보여줄 data array
+        //오른쪽 레이블 삭제
+        barChartView.rightAxis.enabled = false
+        //줌 비활성화
+        barChartView.doubleTapToZoomEnabled = false
+        // X축 레이블 위치 조정
+        barChartView.xAxis.labelPosition = .bottom
+        // X축 레이블 포맷 지정
+        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
+        // X축 레이블 갯수 최대로 설정
+        barChartView.xAxis.setLabelCount(dataPoints.count, force: false)
                 
-             // chart data array 에 데이터 추가
-//             for i in 0..<newHJ.count {
-//                    let value = ChartDataEntry(x: i, y: newHJ[i])
-//                    lineChartEntry.append(value)
-//             }
-//        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number")
-//             line1.colors = [NSUIColor.blue]
-//                
-//             let data = LineChartData()
-//             data.addDataSet(line1)
-//                
-//             lineChartView.data = data
+        barChartView.data = chartData
+    }
+}
+
+//index로 문자열 자르기
+extension String {
+    func substring(from: Int, to: Int) -> String {
+        guard from < count, to >= 0, to - from >= 0 else {
+        return ""
+        }
+
+    // Index 값 획득
+    let startIndex = index(self.startIndex, offsetBy: from)
+    let endIndex = index(self.startIndex, offsetBy: to + 1)
+    // '+1'이 있는 이유: endIndex는 문자열의 마지막 그 다음을 가리키기 때문
+
+    // 파싱
+    return String(self[startIndex ..< endIndex])
     }
 }
